@@ -3,7 +3,7 @@ import { EditorProps } from '@/types';
 import '../styles/index.css';
 import { addResourceBundle, changeLanguage } from '@/editor/i18n';
 import RichText from './RichText';
-import { Descendant } from 'slate';
+import { Descendant, Operation } from 'slate';
 
 export function Editor({
   locale,
@@ -21,9 +21,9 @@ export function Editor({
     document.documentElement.setAttribute('data-editor-theme', theme);
   }, [theme]);
 
-  const handleChange = useCallback((value: Descendant[]) => {
+  const handleChange = useCallback((ops: Operation[], value: Descendant[]) => {
     // convert value to EditorData
-    console.log(value);
+    console.log(ops, value);
   }, []);
 
   const value = useMemo(() => {

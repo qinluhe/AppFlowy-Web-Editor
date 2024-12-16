@@ -8,7 +8,7 @@ export enum NodeType {
 export interface Node {
   type: NodeType;
   children: Node[];
-  data: Record<string, unknown>;
+  data?: Record<string, unknown>;
   delta?: Op[];
 }
 
