@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "toolbar": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "link": "Link",
+      "image": "Image"
+    },
+    "placeholder": "Write something...",
+    "menu": {
+      "undo": "Undo",
+      "redo": "Redo"
+    }
+  }
+}

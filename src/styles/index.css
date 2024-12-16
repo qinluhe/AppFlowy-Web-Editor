@@ -1,0 +1,6 @@
+@import "./variables/light.variables.css";
+@import "./variables/dark.variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
