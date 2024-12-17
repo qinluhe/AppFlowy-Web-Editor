@@ -32,7 +32,11 @@
     "types": [
       "react-i18next"
     ],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "src/@types",
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src",

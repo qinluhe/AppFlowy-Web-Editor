@@ -1,15 +1,25 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useContext, useEffect, useMemo } from 'react';
 import { EditorProps } from '@/types';
 import '../styles/index.css';
 import { addResourceBundle, changeLanguage } from '@/editor/i18n';
 import RichText from './RichText';
 import { Descendant, Operation } from 'slate';
+import { transformFromSlateData, transformToSlateData } from '@/utils/transform';
+import ThemeEditor from './ThemeEditor';
+import { EditorContext } from '@/editor/context';
 
 export function Editor({
   locale,
   theme = 'light',
   readOnly = false,
+  onChange,
+  initialValue: initialValueProp,
 }: EditorProps) {
+  const context = useContext(EditorContext);
+  if (!context) {
+    throw new Error('EditorProvider must be used');
+  }
+
   useEffect(() => {
     if (locale) {
       addResourceBundle(locale.lang, 'translation', locale.resources);
@@ -21,20 +31,28 @@ export function Editor({
     document.documentElement.setAttribute('data-editor-theme', theme);
   }, [theme]);
 
-  const handleChange = useCallback((ops: Operation[], value: Descendant[]) => {
+  const handleChange = useCallback((_: Operation[], value: Descendant[]) => {
     // convert value to EditorData
-    console.log(ops, value);
-  }, []);
+    const data = transformFromSlateData(value);
+    console.log({
+      slateData: value,
+      editorData: data,
+    });
+    onChange?.(data);
+  }, [onChange]);
 
   const value = useMemo(() => {
     // convert initialValue to Descendant[]
-    return undefined;
-  }, []);
+    if (!initialValueProp) return undefined;
+    return transformToSlateData(initialValueProp);
+  }, [initialValueProp]);
 
   return (
-    <div className="w-full text-text-title border p-10 rounded-lg overflow-hidden bg-bg-body border-line-divider">
-      <RichText onChange={handleChange} initialValue={value} readOnly={readOnly}/>
-    </div>
+    <ThemeEditor theme={theme}>
+      <div className="appflowy-editor selection:bg-content-blue-100 w-full text-text-title overflow-hidden">
+        <RichText editor={context.editor} onChange={handleChange} initialValue={value} readOnly={readOnly}/>
+      </div>
+    </ThemeEditor>
   );
 }
 

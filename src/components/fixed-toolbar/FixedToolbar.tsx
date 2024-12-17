@@ -1,12 +1,22 @@
-import { ReactEditor } from 'slate-react';
+import { Divider } from '@mui/material';
 
-export function FixedToolbar({ editor }: {
-  editor: ReactEditor;
-}) {
-  console.log(editor);
+import Color from './Color';
+import BUIS from '@/components/fixed-toolbar/BIUS';
+import List from '@/components/fixed-toolbar/List';
+import Aa from '@/components/fixed-toolbar/Aa';
+
+export function FixedToolbar() {
+
   return (
-    <div className={'flex items-center flex-wrap gap-2 border-b border-line-divider'}>
-
+    <div onMouseDown={e => {
+      e.preventDefault();
+      e.stopPropagation();
+    }} className={'flex items-center py-3 px-4 flex-wrap gap-1.5'}>
+      <Aa/>
+      <List/>
+      <Divider orientation={'vertical'} flexItem className={'!my-1'}/>
+      <BUIS/>
+      <Color/>
     </div>
   );
 }

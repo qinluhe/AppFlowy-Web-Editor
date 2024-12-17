@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
+import svgr from 'vite-plugin-svgr';
 
 import { copyFileSync, mkdirSync, existsSync, readdir } from 'fs';
 
@@ -41,6 +42,7 @@ export default defineConfig(({ command }) => {
     root: isServe ? 'src/dev' : undefined,
     plugins: [
       react(),
+      svgr(),
       !isServe &&
       dts({
         insertTypesEntry: true,

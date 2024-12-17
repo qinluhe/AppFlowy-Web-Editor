@@ -30,12 +30,51 @@ pnpm add @appflowyinc/editor
 
 ## 🚀 Quick Start
 
+To use the AppFlowy Web Editor, import the `Editor` and `EditorProvider` components from the package and wrap your app
+
 ```tsx
 
-import { Editor } from '@appflowyinc/editor';
+import { Editor, EditorProvider } from '@appflowyinc/editor';
 
 const App = () => {
-  return <Editor/>;
+  return <EditorProvider>
+    <Editor/>
+  </EditorProvider>
+};
+
+export default App;
+```
+
+## 📚 Apply Data
+
+You can get `editor` from the `useEditor` hook and apply data to the editor.
+
+```tsx
+import { Editor, EditorProvider, useEditor, NodeType } from '@appflowyinc/editor';
+
+const App = () => {
+  const editor = useEditor();
+
+  useEffect(() => {
+    editor.applyData({
+      type: NodeType.Paragraph,
+      delta: [
+        {
+          insert: 'Hello, World!',
+        },
+      ],
+      children: []
+    });
+  }, []);
+
+  return
+  <Editor/>;
+};
+
+const Main = () => {
+  return <EditorProvider>
+    <App/>
+  </EditorProvider>;
 };
 
 export default App;
@@ -47,10 +86,12 @@ The AppFlowy Web Editor supports theme switching between light and dark modes. Y
 the `theme` prop to the `Editor` component.
 
 ```tsx
-import { Editor } from '@appflowyinc/editor';
+import { Editor, EditorProvider } from '@appflowyinc/editor';
 
 const App = () => {
-  return <Editor theme={'dark'}/>;
+  return <EditorProvider>
+    <Editor theme={'dark'}/>
+  </EditorProvider>;
 };
 
 export default App;
@@ -63,14 +104,16 @@ the `Editor` component.
 
 ```tsx
 
-import { Editor } from '@appflowyinc/editor';
+import { Editor, EditorProvider } from '@appflowyinc/editor';
 import zh from '@appflowyinc/editor/locales/zh';
 
 const App = () => {
-  return <Editor locale={{
-    lang: 'zh',
-    resources: zh,
-  }}/>;
+  return <EditorProvider>
+    <Editor locale={{
+      lang: 'zh',
+      resources: zh,
+    }}/>
+  </EditorProvider>;
 };
 
 export default App;
@@ -101,6 +144,10 @@ pnpm run dev
 ```
 
 Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
+![img.png](img.png)
+
+Switch between light and dark mode by clicking the theme switcher in the top right corner.
+![img_1.png](img_1.png)
 
 ## 📄 License
 

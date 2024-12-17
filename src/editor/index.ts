@@ -1,1 +1,5 @@
-export * from './Editor';
+export { Editor } from './Editor';
+export {
+  EditorProvider,
+  useEditor,
+} from './useEditor';
