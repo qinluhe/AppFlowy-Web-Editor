@@ -1,5 +1,8 @@
 {
   "translation": {
+    "toolbar": {
+      "bold": "粗体"
+    },
     "editor": {
       "fontColorDefault": "默认",
       "fontColorRed": "红色",
