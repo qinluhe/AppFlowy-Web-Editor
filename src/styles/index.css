@@ -6,8 +6,11 @@
 @tailwind utilities;
 
 div[data-slate-node="element"] {
-    @apply py-1;
+    @apply py-1 relative;
+}
 
+div[data-slate-node="element"] div[data-slate-placeholder="true"] {
+    @apply leading-[2em];
 }
 
 

@@ -59,9 +59,12 @@ export default function App() {
         />
 
       </div>
-      <EditorProvider>
-        <Editor theme={theme} initialValue={initialValue}/>
-      </EditorProvider>
+      <div className={'h-[500px] w-full'}>
+        <EditorProvider>
+          <Editor theme={theme}/>
+        </EditorProvider>
+      </div>
+
     </div>
   );
 }

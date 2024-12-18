@@ -49,7 +49,8 @@ export function Editor({
 
   return (
     <ThemeEditor theme={theme}>
-      <div className="appflowy-editor selection:bg-content-blue-100 w-full text-text-title overflow-hidden">
+      <div
+        className="appflowy-editor flex flex-col selection:bg-content-blue-100 w-full text-text-title overflow-hidden">
         <RichText editor={context.editor} onChange={handleChange} initialValue={value} readOnly={readOnly}/>
       </div>
     </ThemeEditor>

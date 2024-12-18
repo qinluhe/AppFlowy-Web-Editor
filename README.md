@@ -28,6 +28,15 @@ yarn add @appflowyinc/editor
 pnpm add @appflowyinc/editor
 ```
 
+Note: This package requires these peer dependencies to be installed:
+
+```
+"peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+}
+```
+
 ## 🚀 Quick Start
 
 To use the AppFlowy Web Editor, import the `Editor` and `EditorProvider` components from the package and wrap your app

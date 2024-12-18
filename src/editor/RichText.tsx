@@ -34,10 +34,10 @@ const RichText = ({ editor, readOnly, onChange, initialValue = defaultInitialVal
 
   return (
     <Slate editor={editor} onChange={handleOnChange} initialValue={initialValue}>
-      <FixedToolbar/>
+      {!readOnly && <FixedToolbar/>}
       <Editable
         readOnly={readOnly}
-        className={'outline-none px-5 py-3'}
+        className={'outline-none flex-1 h-auto px-5 py-3'}
         placeholder={t('placeholder')}
         renderElement={Element}
         renderLeaf={Leaf}
