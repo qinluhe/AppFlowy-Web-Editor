@@ -40,10 +40,6 @@
     "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@1/dist/index.js"
   ],
   "plugin.inlang.i18next": {
-    "pathPattern": "./src/locales/{languageTag}.json",
-    "variableReferencePattern": [
-      "{{",
-      "}}"
-    ]
+    "pathPattern": "./src/locales/{languageTag}.json"
   }
 }
