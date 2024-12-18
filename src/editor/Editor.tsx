@@ -37,7 +37,9 @@ export function Editor({
     document.documentElement.setAttribute('data-editor-theme', theme);
   }, [theme]);
 
-  const handleChange = useCallback((_: Operation[], value: Descendant[]) => {
+  const handleChange = useCallback((ops: Operation[], value: Descendant[]) => {
+    const isSelectionChange = ops.every(op => op.type === 'set_selection');
+    if (isSelectionChange) return;
     // convert value to EditorData
     const data = transformFromSlateData(value);
     onChange?.(data);

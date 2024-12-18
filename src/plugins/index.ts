@@ -7,6 +7,10 @@ import { turnToType } from '@/utils/editor';
 export const withCustomEditor = (editor: ReactEditor) => {
   const { insertBreak, deleteBackward } = editor;
 
+  editor.insertData = data => {
+    return editor.insertTextData(data);
+  };
+
   editor.insertBreak = () => {
     const { selection } = editor;
     if (!selection) return;
