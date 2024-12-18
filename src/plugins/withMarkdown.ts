@@ -1,4 +1,4 @@
-import { allTriggerChars, applyMarkdown } from '@/utils/markdown';
+import { allTriggerChars, applyMarkdown } from '@/lib/markdown';
 import { ReactEditor } from 'slate-react';
 import { TextInsertTextOptions } from 'slate/dist/interfaces/transforms/text';
 

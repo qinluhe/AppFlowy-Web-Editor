@@ -1,6 +1,15 @@
 import { Editor, EditorData, NodeType, EditorProvider } from '../index';
 import { useCallback, useState } from 'react';
-import { MenuItem, Select, Switch } from '@mui/material';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 const initialValue: EditorData = [
   {
@@ -82,19 +91,30 @@ export default function App() {
 
   return (
     <div
-      className={'border text-text-title bg-bg-body flex flex-col items-center gap-4 p-10 my-20 rounded-[16px] max-w-[869px] w-full m-auto'}>
+      className={'border text-foreground bg-background flex flex-col items-center gap-4 p-10 my-20 rounded-[16px] max-w-[869px] w-full m-auto'}>
       <div className={'flex gap-4 items-center'}>
         <h1 className={'text-2xl'}>Editor Demo</h1>
-        <Switch
-          onClick={handleSwitchTheme}
-          className={'px-4 py-2 bg-fill-primary text-text-title rounded-md'}
-        />
-        <Select size={'small'} className={'w-[100px]'} value={lang} onChange={(e) => setLang(e.target.value as string)}>
-          {
-            languages.map((lang) => (
-              <MenuItem key={lang} value={lang}>{lang}</MenuItem>
-            ))
-          }
+        <div className={'flex gap-2 items-center'}>
+          <Switch
+            checked={theme === 'dark'}
+            onCheckedChange={handleSwitchTheme}
+          />
+          <Label>Theme</Label>
+        </div>
+
+        <Select onValueChange={setLang}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Language"/>
+          </SelectTrigger>
+          <SelectContent>
+            {
+              languages.map((lang) => (
+                <SelectItem key={lang} value={lang}>
+                  {lang}
+                </SelectItem>
+              ))
+            }
+          </SelectContent>
         </Select>
 
       </div>

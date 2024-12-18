@@ -5,8 +5,7 @@ import { initI18n } from '@/i18n/config';
 import { addResourceBundle, changeLanguage } from '@/i18n';
 import RichText from './RichText';
 import { Descendant, Operation } from 'slate';
-import { transformFromSlateData, transformToSlateData } from '@/utils/transform';
-import ThemeEditor from './ThemeEditor';
+import { transformFromSlateData, transformToSlateData } from '@/lib/transform';
 import { EditorContext } from '@/editor/context';
 
 initI18n();
@@ -52,12 +51,10 @@ export function Editor({
   }, [initialValueProp]);
 
   return (
-    <ThemeEditor theme={theme}>
-      <div
-        className="appflowy-editor flex flex-col selection:bg-content-blue-100 w-full text-text-title overflow-hidden">
-        <RichText editor={context.editor} onChange={handleChange} initialValue={value} readOnly={readOnly}/>
-      </div>
-    </ThemeEditor>
+    <div
+      className="appflowy-editor flex flex-col selection:bg-selection w-full text-foreground overflow-hidden">
+      <RichText editor={context.editor} onChange={handleChange} initialValue={value} readOnly={readOnly}/>
+    </div>
   );
 }
 

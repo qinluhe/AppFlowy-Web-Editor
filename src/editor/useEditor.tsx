@@ -4,10 +4,9 @@ import { withHistory } from 'slate-history';
 import { withReact } from 'slate-react';
 import { createEditor, Editor } from 'slate';
 import { AppFlowyEditor, EditorData } from '@/types';
-import { transformToSlateData } from '@/utils/transform';
+import { transformToSlateData } from '@/lib/transform';
 import { EditorContext } from '@/editor/context';
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function useEditor(): AppFlowyEditor {
   const context = useContext(EditorContext);
   if (!context) {

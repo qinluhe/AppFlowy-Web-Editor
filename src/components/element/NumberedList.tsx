@@ -1,7 +1,7 @@
 import { ReactEditor, RenderElementProps, useReadOnly, useSlate } from 'slate-react';
 import { useMemo } from 'react';
 import { NodeType } from '@/types';
-import { getListLevel, letterize, romanize } from '@/utils/list';
+import { getListLevel, letterize, romanize } from '@/lib/list';
 import { Element, Path } from 'slate';
 
 enum Letter {

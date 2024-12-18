@@ -1,4 +1,4 @@
-import { Divider } from '@mui/material';
+import { Separator } from '@/components/ui/separator';
 
 import Color from './Color';
 import BUIS from '@/components/fixed-toolbar/BIUS';
@@ -14,7 +14,7 @@ export function FixedToolbar() {
     }} className={'flex items-center py-3 px-4 flex-wrap gap-1.5'}>
       <Aa/>
       <List/>
-      <Divider orientation={'vertical'} flexItem className={'!my-1'}/>
+      <Separator orientation={'vertical'} className={'!h-4'}/>
       <BUIS/>
       <Color/>
     </div>

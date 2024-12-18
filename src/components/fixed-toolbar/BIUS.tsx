@@ -1,8 +1,8 @@
-import { IconButton, IconButtonProps } from '@mui/material';
+import { Button, ButtonProps } from '@/components/ui/button';
 import { InlineType } from '@/types';
 import { useFocused, useReadOnly, useSlate } from 'slate-react';
 import { useCallback, useEffect, useState } from 'react';
-import { isMarkActive } from '@/utils/editor';
+import { isMarkActive } from '@/lib/editor';
 import BoldIcon from '@/assets/bold.svg?react';
 import ItalicIcon from '@/assets/italic.svg?react';
 import UnderlineIcon from '@/assets/underline.svg?react';
@@ -47,30 +47,29 @@ function BUIS() {
 
   const getFormatButtonProps = useCallback((format: InlineType) => {
     return {
-      color: (marks?.[format] ? 'primary' : 'inherit') as IconButtonProps['color'],
+      color: (marks?.[format] ? 'primary' : 'secondary'),
       onClick: handleClick(format),
-      size: 'small' as IconButtonProps['size'],
+      size: 'icon',
       disabled: readOnly || !focused,
-      className: 'font-medium',
-    };
+      variant: 'ghost',
+    } as ButtonProps;
   }, [marks, handleClick, readOnly, focused]);
   return (
     <>
-      <IconButton {...getFormatButtonProps(InlineType.Bold)}>
-        <BoldIcon className={'w-6 h-6'}/>
-      </IconButton>
-      <IconButton {...getFormatButtonProps(InlineType.Italic)}>
-        <ItalicIcon className={'w-6 h-6'}/>
-      </IconButton>
-      <IconButton {...getFormatButtonProps(InlineType.Underline)}>
-        <UnderlineIcon className={'w-6 h-6'}/>
-      </IconButton>
-      <IconButton {...getFormatButtonProps(InlineType.Strikethrough)}>
-        <StrikethroughIcon className={'w-6 h-6'}/>
-      </IconButton>
+      <Button {...getFormatButtonProps(InlineType.Bold)}>
+        <BoldIcon className={'!w-5 !h-5'}/>
+      </Button>
+      <Button {...getFormatButtonProps(InlineType.Italic)}>
+        <ItalicIcon className={'!w-5 !h-5'}/>
+      </Button>
+      <Button {...getFormatButtonProps(InlineType.Underline)}>
+        <UnderlineIcon className={'!w-5 !h-5'}/>
+      </Button>
+      <Button {...getFormatButtonProps(InlineType.Strikethrough)}>
+        <StrikethroughIcon className={'!w-5 !h-5'}/>
+      </Button>
     </>
   );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export default BUIS;

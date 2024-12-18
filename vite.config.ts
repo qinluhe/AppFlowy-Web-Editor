@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import svgr from 'vite-plugin-svgr';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 import { copyFileSync, mkdirSync, existsSync, readdir } from 'fs';
 
@@ -49,6 +50,11 @@ export default defineConfig(({ command }) => {
         include: ['src'],
       }),
       copyLocalesPlugin(),
+      process.env.ANALYZE_MODE
+        ? visualizer({
+          emitFile: true,
+        })
+        : undefined,
     ],
     build: isServe ? undefined : {
       lib: {
@@ -62,11 +68,16 @@ export default defineConfig(({ command }) => {
         external: [
           'react',
           'react-dom',
+          'i18next',
+          'react-i18next',
+          'i18next-resources-to-backend',
         ],
         output: {
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',
+            i18next: 'i18next',
+            'react-i18next': 'reactI18next',
           },
         },
       },

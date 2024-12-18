@@ -1,7 +1,7 @@
 import { ReactEditor, RenderElementProps, useReadOnly, useSlateStatic } from 'slate-react';
 import { useCallback, useMemo } from 'react';
 import { CheckboxData } from '@/types';
-import { toggleTodoList } from '@/utils/editor';
+import { toggleTodoList } from '@/lib/editor';
 import CheckboxUncheckSvg from '@/assets/uncheck.svg?react';
 import CheckboxCheckSvg from '@/assets/check_filled.svg?react';
 
@@ -24,7 +24,6 @@ function Checkbox({ attributes, children, element }: RenderElementProps) {
       edge: 'end',
     });
     ReactEditor.focus(editor);
-    console.log('path', path);
     toggleTodoList(editor, path);
 
   }, [editor, element, readOnly]);
@@ -33,7 +32,6 @@ function Checkbox({ attributes, children, element }: RenderElementProps) {
     const classList = [''];
     if (!readOnly) {
       classList.push('cursor-pointer');
-      classList.push('hover:text-fill-default');
     }
     return classList.join(' ');
   }, [readOnly]);
@@ -48,7 +46,7 @@ function Checkbox({ attributes, children, element }: RenderElementProps) {
         className={iconClassName}
       >
         {data.checked ? <CheckboxCheckSvg className={'w-5 h-6'}/> : <CheckboxUncheckSvg
-          className={'w-5 h-6 text-icon-secondary'}/>}
+          className={'w-5 h-6'}/>}
       </span>
       <span className={'flex-1'} suppressContentEditableWarning contentEditable={!readOnly}>
         {children}

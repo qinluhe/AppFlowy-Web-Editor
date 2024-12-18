@@ -3,7 +3,7 @@ import CircleIcon from '@/assets/bulleted_list_icon_2.svg?react';
 import SquareIcon from '@/assets/bulleted_list_icon_3.svg?react';
 import { ReactEditor, RenderElementProps, useReadOnly, useSlate } from 'slate-react';
 import { useMemo } from 'react';
-import { getListLevel } from '@/utils/list';
+import { getListLevel } from '@/lib/list';
 import { NodeType } from '@/types';
 
 enum Letter {

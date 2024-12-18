@@ -1,5 +1,5 @@
 import { RenderLeafProps } from 'slate-react';
-import { renderColor } from '@/utils/color';
+import { renderColor } from '@/lib/color';
 
 function Leaf({ attributes, children, leaf }: RenderLeafProps) {
   const style: React.CSSProperties = {};

@@ -1,7 +1,7 @@
 import { Editor, Range, Transforms, Element, NodeEntry } from 'slate';
 import { CheckboxData, HeadingData, InlineType, NodeType, NumberedListData } from '@/types';
 import { ElementData } from '@/@types/editor';
-import { isMarkActive, turnToType } from '@/utils/editor';
+import { isMarkActive, turnToType } from '@/lib/editor';
 
 enum SpecialSymbol {
   EM_DASH = '—',

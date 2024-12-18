@@ -1,8 +1,8 @@
 import { KeyboardEvent, useCallback } from 'react';
 import { useReadOnly } from 'slate-react';
-import { createHotkey, HOT_KEY_NAME } from '@/utils/hotkeys';
+import { createHotkey, HOT_KEY_NAME } from '@/lib/hotkeys';
 import { Editor } from 'slate';
-import { highLight, toggleMark, toggleTodoList } from '@/utils/editor';
+import { highLight, toggleMark, toggleTodoList } from '@/lib/editor';
 import { InlineType } from '@/types';
 
 export function useKeydown(editor: Editor) {

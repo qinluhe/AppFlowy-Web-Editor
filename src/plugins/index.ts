@@ -2,7 +2,7 @@ import { ReactEditor } from 'slate-react';
 import { Editor, Element, Range, Point } from 'slate';
 import { NodeType } from '@/types';
 import { withMarkdown } from '@/plugins/withMarkdown';
-import { turnToType } from '@/utils/editor';
+import { turnToType } from '@/lib/editor';
 
 export const withCustomEditor = (editor: ReactEditor) => {
   const { insertBreak, deleteBackward } = editor;
