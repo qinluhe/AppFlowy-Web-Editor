@@ -114,12 +114,15 @@ the `Editor` component.
 ```tsx
 
 import { Editor, EditorProvider } from '@appflowyinc/editor';
-import zh from '@appflowyinc/editor/locales/zh';
+// Optionally, you can import the language resources from the package
+import zh from '@appflowyinc/editor/locales/zh-CN.json';
 
 const App = () => {
   return <EditorProvider>
     <Editor locale={{
-      lang: 'zh',
+      // The language code.
+      lang: 'zh-CN',
+      // Optionally, you can pass the language resources or let it use the default resources
       resources: zh,
     }}/>
   </EditorProvider>;
@@ -127,6 +130,38 @@ const App = () => {
 
 export default App;
 ```
+
+### Supported Languages
+
+- English(en)
+- Arabic(ar-SA)
+- Catalan(ca-ES)
+- Central Kurdish(ckb-KU)
+- Czech(cs-CZ)
+- German(de-DE)
+- Spanish(es-VE)
+- Basque(eu-ES)
+- Persian(fa)
+- French(fr-CA)
+- French(fr-FR)
+- Hebrew(he)
+- Hungarian(hu-HU)
+- Indonesian(id-ID)
+- Italian(it-IT)
+- Japanese(ja-JP)
+- Korean(ko-KR)
+- Polish(pl-PL)
+- Brazilian Portuguese(pt-BR)
+- Portuguese(pt-PT)
+- Russian(ru-RU)
+- Swedish(sv-SE)
+- Thai(th-TH)
+- Turkish(tr-TR)
+- Ukrainian(uk-UA)
+- Vietnamese(vi)
+- Vietnamese(vi-VN)
+- Simplified Chinese(zh-CN)
+- Traditional Chinese(zh-TW)
 
 ## 📖 API
 

@@ -1,12 +1,15 @@
 import { useCallback, useContext, useEffect, useMemo } from 'react';
 import { EditorProps } from '@/types';
-import '../styles/index.css';
-import { addResourceBundle, changeLanguage } from '@/i18n.ts';
+import '@/styles/index.scss';
+import { initI18n } from '@/i18n/config';
+import { addResourceBundle, changeLanguage } from '@/i18n';
 import RichText from './RichText';
 import { Descendant, Operation } from 'slate';
 import { transformFromSlateData, transformToSlateData } from '@/utils/transform';
 import ThemeEditor from './ThemeEditor';
 import { EditorContext } from '@/editor/context';
+
+initI18n();
 
 export function Editor({
   locale,
@@ -21,10 +24,13 @@ export function Editor({
   }
 
   useEffect(() => {
-    if (locale) {
-      addResourceBundle(locale.lang, 'translation', locale.resources);
-      void changeLanguage(locale.lang);
-    }
+    void (async () => {
+      if (locale) {
+        const resources = locale.resources || (await import(`../locales/${locale.lang}.json`)).default;
+        addResourceBundle(locale.lang, 'translation', resources.translation);
+        await changeLanguage(locale.lang);
+      }
+    })();
   }, [locale]);
 
   useEffect(() => {

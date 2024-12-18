@@ -37,8 +37,37 @@ export interface EditorNode {
 export type EditorData = EditorNode[];
 
 export interface EditorLocale {
+  // supported language: "en",
+  //     "ar-SA",
+  //     "ca-ES",
+  //     "ckb-KU",
+  //     "cs-CZ",
+  //     "de-DE",
+  //     "es-VE",
+  //     "eu-ES",
+  //     "fa",
+  //     "fr-CA",
+  //     "fr-FR",
+  //     "he",
+  //     "hu-HU",
+  //     "id-ID",
+  //     "it-IT",
+  //     "ja-JP",
+  //     "ko-KR",
+  //     "pl-PL",
+  //     "pt-BR",
+  //     "pt-PT",
+  //     "ru-RU",
+  //     "sv-SE",
+  //     "th-TH",
+  //     "tr-TR",
+  //     "uk-UA",
+  //     "vi",
+  //     "vi-VN",
+  //     "zh-CN",
+  //     "zh-TW"
   lang: string;
-  resources: Record<string, string>;
+  resources?: Record<string, string>;
 }
 
 export interface EditorProps {

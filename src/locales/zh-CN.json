@@ -3,6 +3,7 @@
     "button": {
       "delete": "删除"
     },
+    "placeholder": "请输入...",
     "editor": {
       "fontColorDefault": "默认",
       "fontColorRed": "红色",

@@ -57,6 +57,7 @@ export default defineConfig(({ command }) => {
         formats: ['es', 'cjs'],
         fileName: (format: string) => `index.${format === 'es' ? 'mjs' : 'js'}`,
       },
+      cssCodeSplit: true,
       rollupOptions: {
         external: [
           'react',
