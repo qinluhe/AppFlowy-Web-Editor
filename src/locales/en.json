@@ -7,7 +7,8 @@
     },
     "button": {
       "submit": "Submit",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "delete": "Delete"
     },
     "placeholder": "Write something...",
     "editor": {
