@@ -167,13 +167,13 @@ export default App;
 
 ### Editor Props
 
-| Prop         | Type                                                  | Default                         | Description                          |
-|--------------|-------------------------------------------------------|---------------------------------|--------------------------------------|
-| theme        | `'light' \| 'dark'`                                   | `'light'`                       | Editor theme                         |
-| locale       | `{ lang: string; resources: Record<string, string> }` | `{ lang: 'en', resources: en }` | Editor language configuration        |
-| readOnly     | `boolean`                                             | `true`                          | Whether the editor is read-only      |
-| onChange     | `(data: EditorData) => void`                          | -                               | Callback when editor content changes |
-| initialValue | `EditorData`                                          | -                               | Initial editor content               |
+| Prop         | Type                                                   | Default   | Description                          |
+|--------------|--------------------------------------------------------|-----------|--------------------------------------|
+| theme        | `'light' \| 'dark'`                                    | `'light'` | Editor theme                         |
+| locale       | `{ lang: string; resources?: Record<string, string> }` | -         | Editor language configuration        |
+| readOnly     | `boolean`                                              | `false`   | Whether the editor is read-only      |
+| onChange     | `(data: EditorData) => void`                           | -         | Callback when editor content changes |
+| initialValue | `EditorData`                                           | -         | Initial editor content               |
 
 ### EditorProvider Props
 

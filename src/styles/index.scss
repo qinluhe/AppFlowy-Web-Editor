@@ -6,6 +6,11 @@
 @tailwind utilities;
 
 .appflowy-editor {
+  @apply h-full overflow-hidden;
+  [role="textbox"] {
+    @apply flex-1 overflow-auto;
+  }
+
   div[data-slate-node="element"] {
     @apply py-1 relative;
   }

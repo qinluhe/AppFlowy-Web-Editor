@@ -40,10 +40,6 @@ export function Editor({
   const handleChange = useCallback((_: Operation[], value: Descendant[]) => {
     // convert value to EditorData
     const data = transformFromSlateData(value);
-    console.log({
-      slateData: value,
-      editorData: data,
-    });
     onChange?.(data);
   }, [onChange]);
 

@@ -37,7 +37,7 @@ const RichText = ({ editor, readOnly, onChange, initialValue = defaultInitialVal
       {!readOnly && <FixedToolbar/>}
       <Editable
         readOnly={readOnly}
-        className={'outline-none flex-1 h-auto px-5 py-3'}
+        className={'outline-none flex-1 h-auto px-5'}
         placeholder={t('placeholder')}
         renderElement={Element}
         renderLeaf={Leaf}
