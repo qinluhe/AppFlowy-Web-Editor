@@ -4,10 +4,10 @@ import {
   Descendant, Operation,
 } from 'slate';
 import { FixedToolbar } from '@/components/fixed-toolbar';
-import { useTranslation } from 'react-i18next';
 import Element from '../components/element/Element';
 import Leaf from '@/components/Leaf';
 import { useKeydown } from '@/editor/useKeydown';
+import { useTranslation } from '@/i18n';
 
 const defaultInitialValue = [
   {

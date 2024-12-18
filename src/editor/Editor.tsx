@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect, useMemo } from 'react';
 import { EditorProps } from '@/types';
 import '../styles/index.css';
-import { addResourceBundle, changeLanguage } from '@/editor/i18n';
+import { addResourceBundle, changeLanguage } from '@/i18n.ts';
 import RichText from './RichText';
 import { Descendant, Operation } from 'slate';
 import { transformFromSlateData, transformToSlateData } from '@/utils/transform';

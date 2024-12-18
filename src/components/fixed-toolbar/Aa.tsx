@@ -2,7 +2,7 @@ import Text from '@/assets/paragraph.svg?react';
 import { Button, ButtonProps, IconButton, IconButtonProps, Popover } from '@mui/material';
 import { useFocused, useReadOnly, useSlate } from 'slate-react';
 import { useCallback, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '@/i18n';
 import { getBlock, isBlockActive, turnToType } from '@/utils/editor';
 import H1 from '@/assets/h1.svg?react';
 import H2 from '@/assets/h2.svg?react';

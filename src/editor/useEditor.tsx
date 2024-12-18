@@ -7,6 +7,7 @@ import { AppFlowyEditor, EditorData } from '@/types';
 import { transformToSlateData } from '@/utils/transform';
 import { EditorContext } from '@/editor/context';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useEditor(): AppFlowyEditor {
   const context = useContext(EditorContext);
   if (!context) {

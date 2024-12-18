@@ -44,7 +44,7 @@ export const gradientMap = {
 
 // Convert ARGB to RGBA
 // Flutter uses ARGB, but CSS uses RGBA
-function argbToRgba (color: string): string {
+function argbToRgba(color: string): string {
   const hex = color.replace(/^#|0x/, '');
 
   const hasAlpha = hex.length === 8;
@@ -61,7 +61,7 @@ function argbToRgba (color: string): string {
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-export function renderColor (color: string) {
+export function renderColor(color: string) {
   if (colorMap[color as ColorEnum]) {
     return colorMap[color as ColorEnum];
   }
@@ -73,11 +73,10 @@ export function renderColor (color: string) {
   return argbToRgba(color);
 }
 
-export function stringToColor (string: string, colorArray?: string[]) {
+export function stringToColor(string: string, colorArray?: string[]) {
   let hash = 0;
   let i;
 
-  /* eslint-disable no-bitwise */
   for (i = 0; i < string.length; i += 1) {
     hash = string.charCodeAt(i) + ((hash << 5) - hash);
   }
@@ -93,7 +92,7 @@ export function stringToColor (string: string, colorArray?: string[]) {
 
     color += `00${value.toString(16)}`.slice(-2);
   }
-  /* eslint-enable no-bitwise */
+   
 
   return color;
 }
@@ -149,7 +148,7 @@ const colorDefaultArray: string[] = [
   '#E3C4C4',
 ];
 
-export function stringAvatar (name: string, colorArray: string[] = colorDefaultArray) {
+export function stringAvatar(name: string, colorArray: string[] = colorDefaultArray) {
   if (!name) {
     return null;
   }
@@ -177,6 +176,6 @@ export const IconColors = [
   '0xFFFF8933',
 ];
 
-export function randomColor (colors: string[]): string {
+export function randomColor(colors: string[]): string {
   return colors[Math.floor(Math.random() * colors.length)];
 }

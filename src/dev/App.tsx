@@ -61,7 +61,7 @@ export default function App() {
       </div>
       <div className={'h-[500px] w-full'}>
         <EditorProvider>
-          <Editor theme={theme}/>
+          <Editor theme={theme} initialValue={initialValue}/>
         </EditorProvider>
       </div>
 
