@@ -61,15 +61,11 @@ export default defineConfig(({ command }) => {
         external: [
           'react',
           'react-dom',
-          'i18next',
-          'react-i18next',
         ],
         output: {
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',
-            i18next: 'i18next',
-            'react-i18next': 'reactI18next',
           },
         },
       },
