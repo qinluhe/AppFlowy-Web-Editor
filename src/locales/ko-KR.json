@@ -6,7 +6,8 @@
       "underline": "Underline"
     },
     "button": {
-      "submit": "Submit"
+      "submit": "Submit",
+      "delete": "삭제"
     },
     "placeholder": "Write something...",
     "editor": {

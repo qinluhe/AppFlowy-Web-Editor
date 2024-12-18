@@ -6,7 +6,8 @@
       "underline": "Underline"
     },
     "button": {
-      "submit": "Submit"
+      "submit": "Submit",
+      "delete": "Radera"
     },
     "placeholder": "Write something...",
     "editor": {
