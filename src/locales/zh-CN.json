@@ -1,5 +1,8 @@
 {
   "translation": {
+    "button": {
+      "delete": "删除"
+    },
     "editor": {
       "fontColorDefault": "默认",
       "fontColorRed": "红色",

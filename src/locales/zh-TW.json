@@ -1,14 +1,15 @@
 {
   "translation": {
-    "placeholder": "輸入一些內容...",
     "toolbar": {
       "bold": "粗體",
       "italic": "斜體",
       "underline": "底線"
     },
     "button": {
-      "submit": "提交"
+      "submit": "提交",
+      "delete": "刪除"
     },
+    "placeholder": "輸入一些內容...",
     "editor": {
       "fontColorDefault": "默認",
       "fontColorRed": "紅色",
