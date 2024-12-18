@@ -121,19 +121,85 @@ export default App;
 
 ## 📖 API
 
-## 🔨 Development Guide
+### Editor Props
 
-### Development Mode
+| Prop         | Type                                                  | Default                         | Description                          |
+|--------------|-------------------------------------------------------|---------------------------------|--------------------------------------|
+| theme        | `'light' \| 'dark'`                                   | `'light'`                       | Editor theme                         |
+| locale       | `{ lang: string; resources: Record<string, string> }` | `{ lang: 'en', resources: en }` | Editor language configuration        |
+| readOnly     | `boolean`                                             | `true`                          | Whether the editor is read-only      |
+| onChange     | `(data: EditorData) => void`                          | -                               | Callback when editor content changes |
+| initialValue | `EditorData`                                          | -                               | Initial editor content               |
+
+### EditorProvider Props
+
+| Prop     | Type        | Default | Description             |
+|----------|-------------|---------|-------------------------|
+| children | `ReactNode` | -       | The children components |
+
+### EditorData
+
+```ts
+type EditorData = {
+  type: NodeType;
+  data: Record<string, any>;
+  delta: DeltaOperation[];
+  children: EditorData[];
+};
+```
+
+### NodeType
+
+```ts
+
+enum NodeType {
+  Paragraph = 'paragraph',
+  Heading = 'heading',
+  NestedBlock = 'nested-block',
+  Todo = 'todo_list',
+  NumberedList = 'numbered_list',
+  BulletedList = 'bulleted_list',
+  Quote = 'quote',
+}
+```
+
+### Hooks
+
+#### useEditor
+
+Returns the editor instance with methods to control the editor.
+
+```ts
+const editor = useEditor();
+```
+
+| Method    | Description              |
+|-----------|--------------------------|
+| applyData | Apply data to the editor |
+
+## 🔨 Development
+
+Guide
+
+###
+
+Development
+Mode
 
 ```
+
 # Install dependencies
+
 pnpm i
 
 # Start development server
+
 pnpm run dev
 
 # Build library
+
 pnpm run build
+
 ```
 
 To run the demo locally:
