@@ -16,6 +16,7 @@ export function Editor({
   readOnly = false,
   onChange,
   initialValue: initialValueProp,
+  modalZIndex,
 }: EditorProps) {
   const context = useContext(EditorContext);
   if (!context) {
@@ -35,6 +36,12 @@ export function Editor({
   useEffect(() => {
     document.documentElement.setAttribute('data-editor-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (modalZIndex) {
+      document.documentElement.style.setProperty('--z-modal', `${modalZIndex}`);
+    }
+  }, [modalZIndex]);
 
   const handleChange = useCallback((ops: Operation[], value: Descendant[]) => {
     const isSelectionChange = ops.every(op => op.type === 'set_selection');

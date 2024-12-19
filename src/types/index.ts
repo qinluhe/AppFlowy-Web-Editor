@@ -76,5 +76,6 @@ export interface EditorProps {
   locale?: EditorLocale;
   theme?: 'light' | 'dark';
   readOnly?: boolean;
+  modalZIndex?: number;
 }
 

@@ -174,6 +174,7 @@ export default App;
 | readOnly     | `boolean`                                              | `false`   | Whether the editor is read-only      |
 | onChange     | `(data: EditorData) => void`                           | -         | Callback when editor content changes |
 | initialValue | `EditorData`                                           | -         | Initial editor content               |
+| modalZIndex  | `number`                                               | 50        | Editor modal z-index                 |
 
 ### EditorProvider Props
 

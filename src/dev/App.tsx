@@ -120,9 +120,11 @@ export default function App() {
       </div>
       <div className={'h-[500px] w-full'}>
         <EditorProvider>
-          <Editor locale={{
-            lang,
-          }} theme={theme} initialValue={initialValue}/>
+          <Editor
+            modalZIndex={1000}
+            locale={{
+              lang,
+            }} theme={theme} initialValue={initialValue}/>
         </EditorProvider>
       </div>
 
