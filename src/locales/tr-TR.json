@@ -9,6 +9,9 @@
     "fontColorOrange": "Turuncu",
     "fontColorPurple": "Mor",
     "fontColorPink": "Pembe",
-    "fontColorBrown": "Kahverengi"
+    "fontColorBrown": "Kahverengi",
+    "fontColorGray": "Gri",
+    "backgroundColorDefault": "Varsayılan",
+    "backgroundColorRed": "Kırmızı"
   }
 }

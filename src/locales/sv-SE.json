@@ -9,6 +9,9 @@
     "fontColorOrange": "Orange",
     "fontColorPurple": "Purpur",
     "fontColorPink": "Rosa",
-    "fontColorBrown": "Brun"
+    "fontColorBrown": "Brun",
+    "fontColorGray": "Grå",
+    "backgroundColorDefault": "Standard",
+    "backgroundColorRed": "Röd"
   }
 }

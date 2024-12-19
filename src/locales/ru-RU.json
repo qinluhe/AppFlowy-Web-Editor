@@ -9,6 +9,9 @@
     "fontColorOrange": "Апельсин",
     "fontColorPurple": "Фиолетовый",
     "fontColorPink": "Розовый",
-    "fontColorBrown": "Коричневый"
+    "fontColorBrown": "Коричневый",
+    "fontColorGray": "Серый",
+    "backgroundColorDefault": "По умолчанию",
+    "backgroundColorRed": "Красный"
   }
 }

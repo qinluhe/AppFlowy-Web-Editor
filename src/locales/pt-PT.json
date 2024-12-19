@@ -9,6 +9,9 @@
     "fontColorOrange": "Laranja",
     "fontColorPurple": "Roxo",
     "fontColorPink": "Rosa",
-    "fontColorBrown": "Marrom"
+    "fontColorBrown": "Marrom",
+    "fontColorGray": "Cinza",
+    "backgroundColorDefault": "Padrão",
+    "backgroundColorRed": "Vermelho"
   }
 }

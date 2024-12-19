@@ -8,6 +8,10 @@
     "fontColorYellow": "黄色的",
     "fontColorOrange": "橙子",
     "fontColorPurple": "紫色的",
-    "fontColorPink": "粉色的"
+    "fontColorPink": "粉色的",
+    "fontColorBrown": "棕色的",
+    "fontColorGray": "灰色的",
+    "backgroundColorDefault": "默认",
+    "backgroundColorRed": "红色的"
   }
 }

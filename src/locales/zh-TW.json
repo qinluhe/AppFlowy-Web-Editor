@@ -8,6 +8,10 @@
     "fontColorYellow": "黃色的",
     "fontColorOrange": "橘子",
     "fontColorPurple": "紫色的",
-    "fontColorPink": "粉紅色的"
+    "fontColorPink": "粉紅色的",
+    "fontColorBrown": "棕色的",
+    "fontColorGray": "灰色的",
+    "backgroundColorDefault": "預設",
+    "backgroundColorRed": "紅色的"
   }
 }

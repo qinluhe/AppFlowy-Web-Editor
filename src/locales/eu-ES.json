@@ -9,6 +9,9 @@
     "fontColorOrange": "Laranja",
     "fontColorPurple": "Morea",
     "fontColorPink": "Arrosa",
-    "fontColorBrown": "Marroia"
+    "fontColorBrown": "Marroia",
+    "fontColorGray": "Grisa",
+    "backgroundColorDefault": "Lehenetsia",
+    "backgroundColorRed": "Gorria"
   }
 }

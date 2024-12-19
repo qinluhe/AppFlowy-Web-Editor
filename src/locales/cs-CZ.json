@@ -9,6 +9,9 @@
     "fontColorOrange": "Pomerančový",
     "fontColorPurple": "Fialová",
     "fontColorPink": "Růžový",
-    "fontColorBrown": "Hnědý"
+    "fontColorBrown": "Hnědý",
+    "fontColorGray": "Šedá",
+    "backgroundColorDefault": "Výchozí",
+    "backgroundColorRed": "Červený"
   }
 }

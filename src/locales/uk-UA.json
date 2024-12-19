@@ -9,6 +9,9 @@
     "fontColorOrange": "Помаранчевий",
     "fontColorPurple": "Фіолетовий",
     "fontColorPink": "Рожевий",
-    "fontColorBrown": "Коричневий"
+    "fontColorBrown": "Коричневий",
+    "fontColorGray": "Сірий",
+    "backgroundColorDefault": "За замовчуванням",
+    "backgroundColorRed": "Червоний"
   }
 }

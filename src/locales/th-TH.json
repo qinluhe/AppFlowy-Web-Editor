@@ -9,6 +9,9 @@
     "fontColorOrange": "ส้ม",
     "fontColorPurple": "สีม่วง",
     "fontColorPink": "สีชมพู",
-    "fontColorBrown": "สีน้ำตาล"
+    "fontColorBrown": "สีน้ำตาล",
+    "fontColorGray": "สีเทา",
+    "backgroundColorDefault": "ค่าเริ่มต้น",
+    "backgroundColorRed": "สีแดง"
   }
 }

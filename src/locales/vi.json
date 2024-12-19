@@ -8,6 +8,10 @@
     "fontColorYellow": "Màu vàng",
     "fontColorOrange": "Quả cam",
     "fontColorPurple": "Màu tím",
-    "fontColorPink": "Hồng"
+    "fontColorPink": "Hồng",
+    "fontColorBrown": "Màu nâu",
+    "fontColorGray": "Xám",
+    "backgroundColorDefault": "Mặc định",
+    "backgroundColorRed": "Màu đỏ"
   }
 }

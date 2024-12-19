@@ -9,6 +9,9 @@
     "fontColorOrange": "البرتقالي",
     "fontColorPurple": "أرجواني",
     "fontColorPink": "لون القرنفل",
-    "fontColorBrown": "بني"
+    "fontColorBrown": "بني",
+    "fontColorGray": "رمادي",
+    "backgroundColorDefault": "تقصير",
+    "backgroundColorRed": "أحمر"
   }
 }

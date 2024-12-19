@@ -9,6 +9,9 @@
     "fontColorOrange": "Oranye",
     "fontColorPurple": "Ungu",
     "fontColorPink": "Berwarna merah muda",
-    "fontColorBrown": "Cokelat"
+    "fontColorBrown": "Cokelat",
+    "fontColorGray": "Abu-abu",
+    "backgroundColorDefault": "Bawaan",
+    "backgroundColorRed": "Merah"
   }
 }

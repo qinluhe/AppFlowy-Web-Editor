@@ -9,6 +9,9 @@
     "fontColorOrange": "כָּתוֹם",
     "fontColorPurple": "סָגוֹל",
     "fontColorPink": "וָרוֹד",
-    "fontColorBrown": "חוּם"
+    "fontColorBrown": "חוּם",
+    "fontColorGray": "אָפוֹר",
+    "backgroundColorDefault": "בְּרִירַת מֶחדָל",
+    "backgroundColorRed": "אָדוֹם"
   }
 }

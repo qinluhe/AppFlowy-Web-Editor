@@ -9,6 +9,9 @@
     "fontColorOrange": "Narancs",
     "fontColorPurple": "Lila",
     "fontColorPink": "Rózsaszín",
-    "fontColorBrown": "Barna"
+    "fontColorBrown": "Barna",
+    "fontColorGray": "Szürke",
+    "backgroundColorDefault": "Alapértelmezett",
+    "backgroundColorRed": "Piros"
   }
 }

@@ -9,6 +9,9 @@
     "fontColorOrange": "주황색",
     "fontColorPurple": "보라",
     "fontColorPink": "분홍색",
-    "fontColorBrown": "갈색"
+    "fontColorBrown": "갈색",
+    "fontColorGray": "회색",
+    "backgroundColorDefault": "기본",
+    "backgroundColorRed": "빨간색"
   }
 }

@@ -9,6 +9,9 @@
     "fontColorOrange": "Arancia",
     "fontColorPurple": "Viola",
     "fontColorPink": "Rosa",
-    "fontColorBrown": "Marrone"
+    "fontColorBrown": "Marrone",
+    "fontColorGray": "Grigio",
+    "backgroundColorDefault": "Predefinito",
+    "backgroundColorRed": "Rosso"
   }
 }

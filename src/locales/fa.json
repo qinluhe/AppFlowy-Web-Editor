@@ -9,6 +9,9 @@
     "fontColorOrange": "نارنجی",
     "fontColorPurple": "بنفش",
     "fontColorPink": "صورتی",
-    "fontColorBrown": "قهوه ای"
+    "fontColorBrown": "قهوه ای",
+    "fontColorGray": "خاکستری",
+    "backgroundColorDefault": "پیش فرض",
+    "backgroundColorRed": "قرمز"
   }
 }
