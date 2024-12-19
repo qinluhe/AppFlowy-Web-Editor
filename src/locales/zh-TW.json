@@ -1,4 +1,13 @@
 {
   "editor": {
+    "placeholder": "寫點東西...",
+    "fontColorDefault": "預設",
+    "fontColorRed": "紅色的",
+    "fontColorGreen": "綠色的",
+    "fontColorBlue": "藍色的",
+    "fontColorYellow": "黃色的",
+    "fontColorOrange": "橘子",
+    "fontColorPurple": "紫色的",
+    "fontColorPink": "粉紅色的"
   }
 }

@@ -1,4 +1,14 @@
 {
   "editor": {
+    "placeholder": "Écris quelque chose...",
+    "fontColorDefault": "Défaut",
+    "fontColorRed": "Rouge",
+    "fontColorGreen": "Vert",
+    "fontColorBlue": "Bleu",
+    "fontColorYellow": "Jaune",
+    "fontColorOrange": "Orange",
+    "fontColorPurple": "Violet",
+    "fontColorPink": "Rose",
+    "fontColorBrown": "Brun"
   }
 }

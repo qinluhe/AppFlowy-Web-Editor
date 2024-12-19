@@ -1,4 +1,14 @@
 {
   "editor": {
+    "placeholder": "Bir şeyler yaz...",
+    "fontColorDefault": "Varsayılan",
+    "fontColorRed": "Kırmızı",
+    "fontColorGreen": "Yeşil",
+    "fontColorBlue": "Mavi",
+    "fontColorYellow": "Sarı",
+    "fontColorOrange": "Turuncu",
+    "fontColorPurple": "Mor",
+    "fontColorPink": "Pembe",
+    "fontColorBrown": "Kahverengi"
   }
 }

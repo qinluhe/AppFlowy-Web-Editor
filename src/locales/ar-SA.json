@@ -1,4 +1,14 @@
 {
   "editor": {
+    "placeholder": "اكتب شيئا...",
+    "fontColorDefault": "تقصير",
+    "fontColorRed": "أحمر",
+    "fontColorGreen": "أخضر",
+    "fontColorBlue": "أزرق",
+    "fontColorYellow": "أصفر",
+    "fontColorOrange": "البرتقالي",
+    "fontColorPurple": "أرجواني",
+    "fontColorPink": "لون القرنفل",
+    "fontColorBrown": "بني"
   }
 }

@@ -1,4 +1,14 @@
 {
   "editor": {
+    "placeholder": "Napiš něco...",
+    "fontColorDefault": "Výchozí",
+    "fontColorRed": "Červený",
+    "fontColorGreen": "Zelený",
+    "fontColorBlue": "Modrý",
+    "fontColorYellow": "Žluť",
+    "fontColorOrange": "Pomerančový",
+    "fontColorPurple": "Fialová",
+    "fontColorPink": "Růžový",
+    "fontColorBrown": "Hnědý"
   }
 }
